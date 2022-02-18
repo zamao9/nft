@@ -179,7 +179,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: 0.1s ease;
+  transition: 0.3s ease;
 
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
