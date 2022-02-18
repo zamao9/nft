@@ -1,6 +1,6 @@
 body {
   font-size: 18px;
-  font-family: 'Shizuru', cursive;
+  font-family: 'Akaya Telivigala', cursive;
   color: #000;
   font-weight: 400;
 
@@ -54,7 +54,7 @@ a {
 
   position: relative;
 
-  background: url(../img/back/11.jpeg) center no-repeat;
+  background: url(../img/back/1.jpeg) center no-repeat;
   background-size: cover;
 }
 .intro:after {
@@ -76,6 +76,7 @@ a {
 .header.hide {
   background: none;
   backdrop-filter: none;
+  box-shadow: none;
 }
 .header {
   width: 80%;
@@ -87,10 +88,10 @@ a {
   justify-content: space-between;
   align-items: center;
 
-  border-radius: 0 0 10px 10px;
   padding: 10px 15px;
   margin: 0 auto;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5), 0 0 4px rgba(0, 0, 0, 0.5), 0 0 6px rgba(0, 0, 0, 0.5);
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -102,18 +103,12 @@ a {
   color: #fff;
 }
 
-.burger.active {
-  transform: rotate(90deg);
-  background-color: #e0e033;
-  box-shadow: 0 0 2px #e0e033, 0 0 4px #e0e033;
-}
 .burger {
   width: 30px;
   height: 30px;
 
   position: relative;
   z-index: 11;
-  transition: 0.3s ease;
   cursor: pointer;
 
   display: flex;
@@ -140,7 +135,7 @@ a {
 
   position: absolute;
   content: '';
-  transition: 0.3s ease;
+  transition: 0.1s ease;
 
   background-color: #fff;
 }
@@ -149,8 +144,7 @@ a {
 .burger_items:before {
   top: 0;
   transform: rotate(45deg);
-  background-color: #333;
-  box-shadow: 0 0 2px #333;
+  box-shadow: 0 0 2px #fff;
 }
 .burger_items:before {
   top: -7px;
@@ -160,42 +154,47 @@ a {
 .burger_items:after {
   top: 0;
   transform: rotate(-45deg);
-  background-color: #333;
-  box-shadow: 0 0 2px #333;
+  box-shadow: 0 0 2px #fff;
 }
 .burger_items:after {
   top: 7px;
 }
 
 .nav.active {
-  transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
 }
 .nav {
   width: 100%;
+  height: 100vh;
 
   position: fixed;
   z-index: 9;
   top: 0;
   left: 0;
-  transform: translateY(-30%);
   opacity: 0;
   pointer-events: none;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  transition: 0.3s ease;
+  align-items: flex-start;
+  transition: 0.1s ease;
 
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
   background-color: rgba(0, 0, 0, 0.5);
-  padding-top: 50px;
-  border-radius: 0 0 10px 10px;
+  padding-top: 130px;
 }
 
-.nav_links {
-  color: #fff;
 
-  padding: 10px 0;
+.nav_links.active {
+  color: #e0e033;
+}
+.nav_links {
+  width: 100%;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 0 10px 40px;
+}
+.nav_links:hover {
+  color: #e0e033;
 }
