@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let nav = document.getElementById('nav'),
         links = document.querySelectorAll('.nav_links'),
         hide_background = document.getElementById('hide_background'),
+        body = document.getElementsByTagName('body'),
         header = document.getElementById('header'),
         burger = document.getElementById('burger');
 
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.remove('active');
       burger.classList.remove('active');
       header.classList.remove('hide');
+      body[0].classList.remove('block');
     })
 
 
