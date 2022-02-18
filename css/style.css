@@ -189,14 +189,12 @@ a {
 
 
 .nav_links.active {
-  color: #e0e033;
+  color: #2368a1;
+  text-shadow: 0 0 2px #2368a1;
 }
 .nav_links {
   width: 100%;
   color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding: 10px 0 10px 40px;
-}
-.nav_links:hover {
-  color: #e0e033;
 }
