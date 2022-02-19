@@ -92,7 +92,7 @@ a {
 
   padding: 15px;
   margin: 0 auto;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(12px);
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -101,6 +101,7 @@ a {
 .header.hide
 .logo {
   color: transparent;
+  text-shadow: none;
 }
 .logo {
   color: #fff;
@@ -198,7 +199,7 @@ a {
   flex-direction: column;
   transition: 0.6s ease;
 
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(12px);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 70px 0 30px;
   border-radius: 5px;
@@ -256,7 +257,7 @@ a {
 
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(12px);
   border-radius: 5px;
   box-shadow: 0 0 2px #fff inset, 0 0 4px #fff inset;
 }
@@ -280,7 +281,7 @@ a {
   height: 30px;
 
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(12px);
   box-shadow: 0 0 2px #fff, 0 0 4px #fff;
   border-radius: 25px;
 }
