@@ -147,7 +147,7 @@ a {
 
   position: absolute;
   content: '';
-  transition: 0.1s ease;
+  transition: 0.3s ease;
 
   background-color: #fff;
 }
