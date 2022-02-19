@@ -120,7 +120,7 @@ a {
   height: 30px;
 
   position: relative;
-  z-index: 11;
+  z-index: 15;
   cursor: pointer;
   transition: 0.3s ease;
 
