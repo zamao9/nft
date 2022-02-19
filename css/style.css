@@ -267,6 +267,7 @@ a {
 /* UP_DOWN_ANIMATION */
 .up_down_animation {
   position: absolute;
+  z-index: 2;
   bottom: 150px;
   left: 50%;
   transform: translateX(-50%);
