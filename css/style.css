@@ -58,6 +58,7 @@ a {
   background: url(../img/back/1.jpeg) center no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  -webkit-background-attachment: fixed;
 }
 .intro:after {
   position: absolute;
