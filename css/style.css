@@ -261,7 +261,10 @@ a {
   border-radius: 5px;
   box-shadow: 0 0 2px #fff inset, 0 0 4px #fff inset;
 }
-
+.intro_button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
+}
 
 
 
@@ -397,11 +400,7 @@ a {
     display: none;
   }
 
-  /* INTRO_CONTENT */
-  .intro_button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
-  }
+
 }
 
 
