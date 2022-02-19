@@ -271,6 +271,7 @@ a {
   box-shadow: 0 0 2px #fff inset, 0 0 4px #fff inset;
   animation: blink_shadow 0.6s ease;
   animation-delay: 2s;
+  margin-bottom: 30px;
 }
 .intro_button:hover {
   background-color: rgba(255, 255, 255, 0.3);
@@ -305,17 +306,7 @@ a {
   }
 }
 
-
-
-
-/* UP_DOWN_ANIMATION */
 .up_down_animation {
-  position: absolute;
-  z-index: 2;
-  bottom: 150px;
-  left: 50%;
-  transform: translateX(-50%) !important;
-
   display: flex;
   justify-content: center;
   align-items: center;
