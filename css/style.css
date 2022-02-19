@@ -1,6 +1,6 @@
 body {
   font-size: 18px;
-  font-family: 'Akaya Telivigala', cursive;
+  font-family: 'Thasadith', sans-serif;
   color: #000;
   font-weight: 400;
 
@@ -79,7 +79,7 @@ a {
   box-shadow: none;
 }
 .header {
-  width: 80%;
+  width: 90%;
   max-width: 1200px;
 
   position: relative;
@@ -92,11 +92,10 @@ a {
 
   padding: 15px;
   margin: 0 auto;
-  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5), 0 0 4px rgba(255, 255, 255, 0.5), 0 0 6px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px;
 }
 
 .header.hide
@@ -105,7 +104,10 @@ a {
 }
 .logo {
   color: #fff;
+  font-weight: 700;
+  font-family: 'Frijole', cursive;
   cursor: pointer;
+  text-shadow: 0 0 3px #fff;
   transition: 0.3s ease;
 }
 
@@ -178,7 +180,7 @@ a {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, 0%);
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5), 0 0 4px rgba(255, 255, 255, 0.5), 0 0 6px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
 }
 .nav {
   width: 100%;
@@ -197,10 +199,9 @@ a {
   transition: 0.6s ease;
 
   backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 70px 0 30px;
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px;
 }
 
 
@@ -218,6 +219,96 @@ a {
 
 
 
+/* INTRO_CONTENT */
+.intro_content {
+  width: 100%;
+  max-width: 500px;
+
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intro_title {
+  font-size: 32px;
+  text-align: center;
+  font-family: 'Frijole', cursive;
+  color: #fff;
+  text-shadow: 0 0 3px #fff;
+  margin-bottom: 30px;
+}
+
+.intro_button {
+  width: 250px;
+
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 2px #fff, 0 0 4px #fff;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  border-radius: 5px;
+  box-shadow: 0 0 2px #fff inset, 0 0 4px #fff inset;
+}
+
+
+
+
+/* UP_DOWN_ANIMATION */
+.up_down_animation {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 15px;
+  height: 30px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 2px #fff, 0 0 4px #fff;
+  border-radius: 25px;
+}
+
+.circle {
+  width: 13px;
+  height: 13px;
+
+  margin: 5px 0;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 2px #fff, 0 0 4px #fff;
+
+  animation: up_down 2s infinite ease;
+}
+@keyframes up_down {
+  0% {
+    transform: translateY(-60%);
+  }
+  50% {
+    transform: translateY(60%);
+  }
+  100% {
+    transform: translateY(-60%);
+  }
+}
+
+
+
 
 
 
@@ -227,6 +318,44 @@ a {
 
 
 @media (min-width: 768px) {
+  /* NAV */
+  .nav {
+    width: 70%;
+
+    position: static;
+    opacity: 1;
+    transform: translate(0);
+    pointer-events: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: 0.6s ease;
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: none;
+    padding: 0;
+    border-radius: none;
+  }
+  .nav_links {
+    color: #fff;
+    text-align: center;
+
+    padding: 0;
+  }
+
+  .burger {
+    display: none;
+  }
+
+}
+
+
+
+
+
+@media (min-width: 1024px) {
   /* LOGO */
   .logo:hover {
     text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
@@ -264,6 +393,12 @@ a {
 
   .burger {
     display: none;
+  }
+
+  /* INTRO_CONTENT */
+  .intro_button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
   }
 }
 

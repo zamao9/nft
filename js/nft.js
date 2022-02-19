@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     offset: 10,
     delay: 0,
-    duration: 1000,
+    duration: 1500,
     easing: 'ease',
     once: true,
     mirror: false,
