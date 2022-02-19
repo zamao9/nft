@@ -261,7 +261,7 @@ a {
   text-align: center;
   color: #fff;
   text-transform: uppercase;
-  transition: 0.3s ease;
+  transition: 0.3s ease !important;
 
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -392,6 +392,7 @@ a {
   .burger {
     display: none;
   }
+
 
 }
 
