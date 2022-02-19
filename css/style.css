@@ -92,7 +92,8 @@ a {
 
   padding: 15px;
   margin: 0 auto;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -199,7 +200,8 @@ a {
   flex-direction: column;
   transition: 0.6s ease;
 
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 70px 0 30px;
   border-radius: 5px;
@@ -257,7 +259,8 @@ a {
 
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-radius: 5px;
   box-shadow: 0 0 2px #fff inset, 0 0 4px #fff inset;
 }
@@ -272,9 +275,9 @@ a {
 .up_down_animation {
   position: absolute;
   z-index: 2;
-  bottom: 190px;
+  bottom: 150px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) !important;
 
   display: flex;
   justify-content: center;
