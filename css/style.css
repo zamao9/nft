@@ -85,8 +85,7 @@ a {
 
   position: fixed;
   z-index: 14;
-  left: 50%;
-  transform: translateX(-50%) !important;
+  left: 5%;
 
   display: flex;
   justify-content: space-between;
