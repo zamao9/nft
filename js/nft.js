@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
         nav = document.getElementById('nav'),
         body = document.getElementsByTagName('body'),
         hide_background = document.getElementById('hide_background'),
-        header = document.getElementById('header'),
+        header_content = document.getElementById('header_content'),
         links = document.querySelectorAll('.nav_links');
 
     burger.addEventListener('click', (event) => {
       event.currentTarget.classList.toggle('active');
       nav.classList.toggle('active');
       hide_background.classList.toggle('active');
-      header.classList.toggle('hide');
+      header_content.classList.toggle('hide');
       body[0].classList.toggle('block');
     });
 
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nav.classList.remove('active');
         burger.classList.remove('active');
         hide_background.classList.remove('active');
-        header.classList.remove('hide');
+        header_content.classList.remove('hide');
         body[0].classList.remove('block');
       })
 
@@ -45,14 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
         links = document.querySelectorAll('.nav_links'),
         hide_background = document.getElementById('hide_background'),
         body = document.getElementsByTagName('body'),
-        header = document.getElementById('header'),
+        header_content = document.getElementById('header_content'),
         burger = document.getElementById('burger');
 
     hide_background.addEventListener('click', (event) => {
       event.currentTarget.classList.remove('active');
       nav.classList.remove('active');
       burger.classList.remove('active');
-      header.classList.remove('hide');
+      header_content.classList.remove('hide');
       body[0].classList.remove('block');
     })
 
