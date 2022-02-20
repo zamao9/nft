@@ -86,6 +86,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+  /* ANIMATION_IMAGE */
+
+
+
+
+
+
+
+
+
+
 
 
 
