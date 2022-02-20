@@ -463,7 +463,9 @@ a {
   justify-content: center;
   gap: 50px;
   perspective: 1300px;
+  -webkit-perspective: 1300px;
   perspective-origin: top;
+  -webkit-perspective-origin: top;
 
   margin: 0 auto;
   padding: 50px 15px;
@@ -494,7 +496,7 @@ a {
 
   border-radius: 5px;
   margin: 0 auto;
-  animation: rotate_y 3s infinite linear;
+  animation: rotate_y 5s infinite linear;
   box-shadow: 0 0 10px #fff;
 }
 .war_heroes_image:after {
