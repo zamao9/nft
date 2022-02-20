@@ -57,6 +57,7 @@ a {
 
   background: url(../img/back/1.jpeg) center no-repeat;
   background-size: cover;
+  background-attachment: fixed !important;
 }
 .intro:after {
   position: absolute;
