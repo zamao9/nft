@@ -86,6 +86,7 @@ a {
   position: fixed;
   z-index: 14;
   left: 5%;
+  top: 5px;
 
   display: flex;
   justify-content: space-between;
@@ -206,7 +207,7 @@ a {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 75px 0 30px;
+  padding: 75px 0 0;
   border-radius: 5px;
 }
 
