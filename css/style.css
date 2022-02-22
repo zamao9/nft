@@ -413,6 +413,8 @@ a {
 }
 
 .link {
+  position: relative;
+
   font-size: 20px;
   color: #fff;
   text-align: center;
@@ -421,8 +423,46 @@ a {
 
   margin: 0 auto;
 }
+.link:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%) rotate(45deg);
+  transition: 0.3s ease;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+}
+.link:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: -35px;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+  background-color: rgba(255, 255, 255, 0.15);
+}
 .link:hover {
   text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
+}
+.link:hover:after {
+  background-color: #658a28;
+  width: calc(100% + 50px);
+  height: 24px;
+  z-index: -1;
+}
+.link:hover:before {
+  box-shadow: 0 0 10px #fff inset;
 }
 
 
@@ -506,6 +546,7 @@ a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  overflow: hidden;
 
   transform: rotate(-45deg);
   transition: 0.3s ease;
@@ -578,46 +619,9 @@ span {
 
 .factions_link {
   position: relative;
-
-  margin-left: 40px;
-}
-.factions_link:before {
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: -35px;
-  transform: translateY(-50%) rotate(45deg);
   transition: 0.3s ease;
 
-  width: 25px;
-  height: 25px;
-
-  border-radius: 5px;
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
-}
-.factions_link:after {
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: -30px;
-  transform: translateY(-50%) rotate(45deg);
-  transition: 0.3s ease;
-
-  width: 15px;
-  height: 15px;
-
-  border-radius: 5px;
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
-  background-color: rgba(255, 255, 255, 0.15);
-}
-.factions_link:hover {
-  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
-}
-.factions_link:hover:after {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.factions_link:hover:before {
-  box-shadow: 0 0 10px #fff inset;
+  margin-left: 45px;
 }
 
 .factions_items {
@@ -632,15 +636,51 @@ span {
   width: 250px;
   height: 300px;
 
+  position: relative;
+  z-index: 1;
+
+  overflow: hidden;
+  opacity: 0.7;
+
   margin: 0 auto;
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.5), 0 0 4px rgba(255, 255, 255, 0.5), 0 0 6px rgba(255, 255, 255, 0.5);
+}
+.factions_image:after {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0);
+}
+.factions_image:hover {
+  animation: blink_factions_image 0.2s ease;
+  opacity: 1;
 }
 .factions_image img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
+}
+@keyframes blink_factions_image {
+  0% {
+    opacity: 0.7;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+
 }
 
 
@@ -776,7 +816,7 @@ span {
 .footer_icon {
   width: 100%;
 
-  font-size: 30px;
+  font-size: 35px;
   color: #fff;
   text-align: center;
   transition: 0.3s ease;
@@ -908,7 +948,7 @@ span {
 
   .footer_text {
     text-align: left;
-
+    margin-bottom: 0;
   }
 
   .footer_subtitle {
