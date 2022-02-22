@@ -283,17 +283,17 @@ a {
 @keyframes blink_shadow {
   0% {
     text-shadow: none;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(101, 138, 40, 0.3);
     box-shadow: 0 0 2px #fff, 0 0 4px #fff;
   }
   50% {
     text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(101, 138, 40, 0.5);
     box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
   }
   100% {
     text-shadow: none;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(101, 138, 40, 0.3);
     box-shadow: 0 0 2px #fff, 0 0 4px #fff;
   }
 }
@@ -423,42 +423,13 @@ a {
 
   margin: 0 auto;
 }
-.link:before {
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: -40px;
-  transform: translateY(-50%) rotate(45deg);
-  transition: 0.3s ease;
-
-  width: 30px;
-  height: 30px;
-
-  border-radius: 5px;
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
-}
-.link:after {
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: -35px;
-  transform: translateY(-50%);
-  transition: 0.3s ease;
-
-  width: 20px;
-  height: 20px;
-
-  border-radius: 5px;
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
-  background-color: rgba(255, 255, 255, 0.15);
-}
 .link:hover {
   text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
 }
 .link:hover:after {
   background-color: #658a28;
   width: calc(100% + 50px);
-  height: 24px;
+  height: 100%;
   z-index: -1;
 }
 .link:hover:before {
@@ -534,7 +505,7 @@ a {
 
 .factions_icons_block.active {
   transform: rotate(0);
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #658a28;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
@@ -557,7 +528,7 @@ a {
 }
 .factions_icons_block:hover {
   transform: rotate(0);
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #658a28;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
@@ -621,8 +592,41 @@ span {
   position: relative;
   transition: 0.3s ease;
 
-  margin-left: 45px;
+  padding-left: 45px;
 }
+.factions_link:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 6px;
+  transform: translateY(-50%) rotate(45deg);
+  transition: 0.3s ease;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+}
+.factions_link:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 11px;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.factions_link:hover:after {
+  width: calc(100% + 5px);
+}
+
 
 .factions_items {
   width: 100%;
@@ -1009,6 +1013,44 @@ span {
   .card_image {
     width: 70%;
     height: 400px;
+  }
+
+  .link:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%) rotate(45deg);
+    transition: 0.3s ease;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+  }
+  .link:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -35px;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  /* FACTIONS */
+  .factions_link:before {
+    left: 6px;
+  }
+  .factions_link:after {
+    left: 11px;
   }
 
   /* UNIVERSE */
