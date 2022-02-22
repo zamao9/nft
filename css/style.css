@@ -434,6 +434,7 @@ a {
 }
 .link:hover:before {
   box-shadow: 0 0 10px #fff inset;
+  left: 100%;
 }
 
 
@@ -622,6 +623,9 @@ span {
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
   background-color: rgba(255, 255, 255, 0.15);
+}
+.factions_link:hover:before {
+  left: 100%;
 }
 .factions_link:hover:after {
   width: calc(100% + 5px);
@@ -1049,6 +1053,7 @@ span {
   .factions_link:before {
     left: 6px;
   }
+
   .factions_link:after {
     left: 11px;
   }
