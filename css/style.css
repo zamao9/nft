@@ -283,7 +283,7 @@ a {
 @keyframes blink_shadow {
   0% {
     text-shadow: none;
-    background-color: rgba(101, 138, 40, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 2px #fff, 0 0 4px #fff;
   }
   50% {
@@ -293,7 +293,7 @@ a {
   }
   100% {
     text-shadow: none;
-    background-color: rgba(101, 138, 40, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 2px #fff, 0 0 4px #fff;
   }
 }
