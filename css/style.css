@@ -212,7 +212,6 @@ a {
   -webkit-backdrop-filter: blur(6px);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 75px 0 30px;
-  margin: 0 auto;
   border-radius: 5px;
 }
 
@@ -234,6 +233,7 @@ a {
   text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
   background-color: rgba(255, 255, 255, 0.5);
 }
+
 
 
 
@@ -447,13 +447,204 @@ a {
 
   text-align: center;
 
-  box-shadow: 0 0 2px #fff inset, 0 0 4px #fff inset, 0 0 6px #fff inset;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
   border-radius: 5px;
   padding: 30px 15px;
 }
 
 .universe_link {
   text-transform: capitalize;
+}
+
+
+
+
+/* FACTIONS */
+.factions {
+  width: 100%;
+
+  background-color: #04071b;
+}
+
+.factions_content {
+  width: 100%;
+  max-width: 1200px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+
+  margin: 0 auto;
+  padding: 50px 15px;
+}
+
+.factions_items {
+  display: block;
+}
+
+.factions_items_icons {
+  display: flex;
+  align-items: center;
+}
+
+.factions_items_content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.factions_icons_block.active {
+  transform: rotate(0);
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: none;
+}
+.factions_icons_block {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  transform: rotate(-45deg);
+  transition: 0.3s ease;
+
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+  animation: blink_icons_block 2s infinite ease;
+}
+@keyframes blink_icons_block {
+  0% {
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+  }
+  50% {
+    box-shadow: 0 0 2px rgba(255, 255, 255) inset, 0 0 4px rgba(255, 255, 255) inset, 0 0 6px rgba(255, 255, 255) inset;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+  }
+}
+
+
+.factions_icons_block.active
+.factions_icons {
+  transform: rotate(0);
+}
+.factions_icons {
+  font-size: 18px;
+  color: #fff;
+
+  transition: 0.3s ease;
+
+  transform: rotate(45deg);
+}
+
+.factions_info.active {
+  display: block;
+}
+.factions_info {
+  width: 100%;
+
+  display: none;
+}
+
+.factions_text {
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+}
+
+.factions_stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.factions_stats_items {
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+  border-radius: 5px;
+  padding: 2px 15px;
+  margin-bottom: 30px;
+}
+
+span {
+  color: #658a28;
+  text-shadow: 0 0 2px rgba(101, 138, 40, 0.5), 0 0 4px rgba(101, 138, 40, 0.5), 0 0 6px rgba(101, 138, 40, 0.5);
+}
+
+.factions_link {
+  position: relative;
+
+  margin-left: 40px;
+}
+.factions_link:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: -35px;
+  transform: translateY(-50%) rotate(45deg);
+  transition: 0.3s ease;
+
+  width: 25px;
+  height: 25px;
+
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+}
+.factions_link:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%) rotate(45deg);
+  transition: 0.3s ease;
+
+  width: 15px;
+  height: 15px;
+
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.factions_link:hover {
+  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
+}
+.factions_link:hover:after {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.factions_link:hover:before {
+  box-shadow: 0 0 10px #fff inset;
+}
+
+.factions_items {
+  width: 100%;
+}
+
+.factions_image.active {
+  display: block;
+}
+.factions_image {
+  display: none;
+  width: 250px;
+  height: 300px;
+
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5), 0 0 4px rgba(255, 255, 255, 0.5), 0 0 6px rgba(255, 255, 255, 0.5);
+}
+.factions_image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 
@@ -467,8 +658,8 @@ a {
   grid-template-columns: 1fr;
   justify-content: center;
   gap: 50px;
-  perspective: 1300px;
-  -webkit-perspective: 1300px;
+  perspective: 2500px;
+  -webkit-perspective: 2500px;
   perspective-origin: top;
   -webkit-perspective-origin: top;
 
@@ -502,7 +693,7 @@ a {
   border-radius: 5px;
   margin: 0 auto;
   animation: rotate_y 5s infinite linear;
-  box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5), 0 0 4px rgba(255, 255, 255, 0.5), 0 0 6px rgba(255, 255, 255, 0.5);
 }
 .war_heroes_image:after {
   width: 100%;
@@ -679,6 +870,24 @@ a {
 
   .text {
     text-align: center;
+  }
+
+  /* FACTIONS */
+  .factions_content {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+    align-items: center;
+
+    margin: 0 auto;
+    padding: 50px 15px;
+  }
+
+  .factions_items_icons {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    height: 280px;
   }
 
   /* WAR_HEROES */

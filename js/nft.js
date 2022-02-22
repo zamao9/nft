@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   burgerActive();
   burgerInactivateHandler();
+  iconClickInfoChange();
 
   function burgerActive() {
 
@@ -33,8 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         header_content.classList.remove('hide');
         body[0].classList.remove('block');
       })
-
-
     };
 
   };
@@ -86,7 +85,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  /* ANIMATION_IMAGE */
+  /* IMAGES_TOGGLE */
+
+  function iconClickInfoChange() {
+
+     let icon = document.getElementsByClassName('factions_icons_block'),
+         info = document.getElementsByClassName('factions_info'),
+         image = document.getElementsByClassName('factions_image');
+
+    for (let i = 0; icon.length > i; ++i) {
+      icon[i].addEventListener('click', (event) => {
+        for (let i = 0; icon.length > i; ++i) {
+          icon[i].classList.remove('active');
+        }
+        for (let i = 0; info.length > i; ++i) {
+          info[i].classList.remove('active');
+        }
+        info[i].classList.add('active');
+        for (let i = 0; image.length > i; ++i) {
+          image[i].classList.remove('active');
+        }
+        image[i].classList.add('active');
+        event.currentTarget.classList.add('active');
+      })
+    };
+  };
+
+
 
 
 
