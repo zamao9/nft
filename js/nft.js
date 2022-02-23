@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   burgerActive();
   burgerInactivateHandler();
   iconClickInfoChange();
+  titleActiveBodyActive();
 
   function burgerActive() {
 
@@ -106,6 +107,30 @@ document.addEventListener('DOMContentLoaded', () => {
           image[i].classList.remove('active');
         }
         image[i].classList.add('active');
+        event.currentTarget.classList.add('active');
+      })
+    };
+  };
+
+
+
+
+  /* ROADMAP_TOGGLE */
+
+  function titleActiveBodyActive() {
+
+     let head = document.getElementsByClassName('roadmap_head_title'),
+         body = document.getElementsByClassName('roadmap_items');
+
+    for (let i = 0; head.length > i; ++i) {
+      head[i].addEventListener('click', (event) => {
+        for (let i = 0; head.length > i; ++i) {
+          head[i].classList.remove('active');
+        }
+        for (let i = 0; body.length > i; ++i) {
+          body[i].classList.remove('active');
+        }
+        body[i].classList.add('active');
         event.currentTarget.classList.add('active');
       })
     };
