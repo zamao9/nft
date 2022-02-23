@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   burgerInactivateHandler();
   iconClickInfoChange();
   titleActiveBodyActive();
+  collapseFaq();
 
   function burgerActive() {
 
@@ -132,6 +133,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         body[i].classList.add('active');
         event.currentTarget.classList.add('active');
+      })
+    };
+  };
+
+
+
+
+  /* FAQ_COLLAPSE */
+
+  function collapseFaq() {
+
+     let head = document.getElementsByClassName('faq_head_title'),
+         body = document.getElementsByClassName('faq_body_text');
+
+    for (let i = 0; head.length > i; ++i) {
+      head[i].addEventListener('click', (event) => {
+        event.currentTarget.classList.toggle('active');
+        body[i].classList.toggle('active');
       })
     };
   };
