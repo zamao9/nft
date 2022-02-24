@@ -149,12 +149,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; head.length > i; ++i) {
       head[i].addEventListener('click', (event) => {
-        for (let i = 0; head.length > i; ++i) {
-          head[i].classList.remove('active');
-          body[i].classList.remove('active');
+
+        let currentTarget = event.currentTarget,
+            activatedTextBlock = document.querySelector('.text.faq_body_text.active');
+
+        if (currentTarget.classList.contains('active')) {
+          currentTarget.classList.remove('active')
+          activatedTextBlock.classList.remove('active')
+        } else {
+          for (let i = 0; head.length > i; ++i) {
+            head[i].classList.remove('active');
+            body[i].classList.remove('active');
+          }
+          event.currentTarget.classList.toggle('active');
+          body[i].classList.toggle('active');
         }
-        event.currentTarget.classList.toggle('active');
-        body[i].classList.toggle('active');
+
+
       })
     };
   };
@@ -167,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* DATA_SCROLL */
 
-$(function(){
+$(function() {
 
   $("[data-scroll]").click(function(event) {
     event.preventDefault();
@@ -181,7 +192,13 @@ $(function(){
     }, 900);
   });
 
-
-
-
 })
+
+
+
+
+
+
+
+
+

@@ -780,69 +780,6 @@ span {
 
 
 
-/* FOOTER */
-.footer {
-  width: 100%;
-
-  position: relative;
-
-  padding: 30px 0 5px;
-  background-color: #04071b;
-}
-
-.footer_content {
-  width: 90%;
-  max-width: 1200px;
-
-  display: block;
-  transition: 0.6s ease;
-
-  padding: 15px;
-  margin: 0 auto;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
-
-.footer_items {
-  display: block;
-  margin-bottom: 15px;
-}
-.footer_items:last-child {
-  margin-bottom: 0;
-}
-
-.footer_title {
-  margin-bottom: 5px;
-}
-
-.footer_icons_block {
-  display: flex;
-  justify-content: center;
-}
-
-.footer_icon {
-  width: 100%;
-
-  font-size: 35px;
-  color: #fff;
-  text-align: center;
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-.footer_icon:hover {
-  color: #fff;
-  text-shadow: 0 0 3px #fff;
-
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-}
-
-
-
-
 /* ROADMAP */
 .roadmap {
   width: 100%;
@@ -1046,6 +983,70 @@ span {
 
 
 
+/* FOOTER */
+.footer {
+  width: 100%;
+
+  position: relative;
+
+  padding: 30px 0 5px;
+  background-color: #04071b;
+}
+
+.footer_content {
+  width: 90%;
+  max-width: 1200px;
+
+  display: block;
+  transition: 0.6s ease;
+
+  padding: 15px;
+  margin: 0 auto;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.footer_items {
+  display: block;
+  margin-bottom: 15px;
+}
+.footer_items:last-child {
+  margin-bottom: 0;
+}
+
+.footer_title {
+  margin-bottom: 5px;
+}
+
+.footer_icons_block {
+  display: flex;
+  justify-content: center;
+}
+
+.footer_icon {
+  width: 100%;
+
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.footer_icon:hover {
+  color: #fff;
+  text-shadow: 0 0 3px #fff;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+
+
+
+
 
 
 @media (min-width: 768px) {
@@ -1143,6 +1144,11 @@ span {
     gap: 0;
     justify-content: center;
     align-items: center;
+  }
+
+  /* ROADMAP */
+  .roadmap_items {
+    padding: 35px 20px;
   }
 
   /* FOOTER */
