@@ -149,6 +149,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; head.length > i; ++i) {
       head[i].addEventListener('click', (event) => {
+        for (let i = 0; head.length > i; ++i) {
+          head[i].classList.remove('active');
+          body[i].classList.remove('active');
+        }
         event.currentTarget.classList.toggle('active');
         body[i].classList.toggle('active');
       })
@@ -156,42 +160,26 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 
-
-
-  /* DATA_SCROLL */
-
-  const nav_link = document.querySelectorAll('.nav_links');
-  if(nav_link.length > 0) {
-    nav_link.forEach (nav_links => {
-      nav_links.addEventListener('click', onNavLinksClick);
-    });
-
-    function onNavLinksClick(event) {
-      const nav_links = event.target;
-      const logo = event.target;
-      if (nav_links.dataset.goto && document.querySelector(nav_links.dataset.goto)){
-        const gotoBlock = document.querySelector(nav_links.dataset.goto);
-        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight -5;
-
-      window.scrollTo ({
-        top: gotoBlockValue,
-        behavior: "smooth"
-      });
-      event.preventDefault();
-      }
-    };
-  };
+});
 
 
 
 
+/* DATA_SCROLL */
 
+$(function(){
 
+  $("[data-scroll]").click(function(event) {
+    event.preventDefault();
 
+    let blockId = $(this).data('scroll'),
+        nav_links = $('.nav_links'),
+        blockOffset = $(blockId).offset().top - document.querySelector('header').offsetHeight - 5;
 
-
-
-
+    $("html, body").animate ({
+      scrollTop: blockOffset
+    }, 900);
+  });
 
 
 
