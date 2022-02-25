@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   };
 
+
+
+
   function burgerInactivateHandler() {
 
     let nav = document.getElementById('nav'),
@@ -144,8 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function collapseFaq() {
 
-     let head = document.getElementsByClassName('faq_head_title'),
-         body = document.getElementsByClassName('faq_body_text');
+    let head = document.getElementsByClassName('faq_head_title'),
+        body = document.getElementsByClassName('faq_body_text');
 
     for (let i = 0; head.length > i; ++i) {
       head[i].addEventListener('click', (event) => {
@@ -153,22 +156,29 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentTarget = event.currentTarget,
             activatedTextBlock = document.querySelector('.text.faq_body_text.active');
 
+
         if (currentTarget.classList.contains('active')) {
+          activatedTextBlock.style.maxHeight = null;
           currentTarget.classList.remove('active')
           activatedTextBlock.classList.remove('active')
         } else {
+          if (activatedTextBlock) {
+            activatedTextBlock.style.maxHeight = null;
+          }
           for (let i = 0; head.length > i; ++i) {
             head[i].classList.remove('active');
             body[i].classList.remove('active');
+            body[i].style.maxHeight = null;
           }
           event.currentTarget.classList.toggle('active');
           body[i].classList.toggle('active');
+
+          let activeTextBlock = document.querySelector('.text.faq_body_text.active');
+          activeTextBlock.style.maxHeight = activeTextBlock.scrollHeight + "px";
         }
-
-
       })
-    };
-  };
+    }
+  }
 
 
 });
@@ -193,10 +203,6 @@ $(function() {
   });
 
 })
-
-
-
-
 
 
 
