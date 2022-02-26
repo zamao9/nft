@@ -867,10 +867,10 @@ span {
 
 .launch_head {
   flex: 0 0 15%;
-  height: 100%;
 
   color: #fff;
   text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
+  font-size: 15px;
 
   display: flex;
   justify-content: center;
