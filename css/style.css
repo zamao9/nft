@@ -36,6 +36,9 @@ a {
 /* HIDE_BACKGROUND */
 .hide_background.active {
   display: block;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .hide_background {
   width: 100%;
@@ -47,10 +50,6 @@ a {
   z-index: 3;
   top: 0;
   left: 0;
-
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
 }
 
 /* INTRO */
