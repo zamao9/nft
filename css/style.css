@@ -49,8 +49,8 @@ a {
   left: 0;
 
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(6px) !important;
-  -webkit-backdrop-filter: blur(6px) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
 }
 
 /* INTRO */
