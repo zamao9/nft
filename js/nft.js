@@ -158,6 +158,7 @@ function collapseFaq() {
       if (currentTarget.classList.contains('active')) {
         activatedTextBlock.style.maxHeight = null;
         activatedTextBlock.style.padding = null;
+        activatedTextBlock.style.margin = null;
         currentTarget.classList.remove('active');
         activatedTextBlock.classList.remove('active');
       } else {
@@ -170,6 +171,7 @@ function collapseFaq() {
           body[i].classList.remove('active');
           body[i].style.maxHeight = null;
           body[i].style.padding = null;
+          body[i].style.margin = null;
         }
 
         event.currentTarget.classList.toggle('active');
@@ -177,6 +179,7 @@ function collapseFaq() {
 
         let activeTextBlock = document.querySelector('.text.faq_body_text.active');
         activeTextBlock.style.padding = '5px 20px 10px';
+        activeTextBlock.style.margin = '0 0 5px';
         activeTextBlock.style.maxHeight = activeTextBlock.scrollHeight + 50 + "px";
       }
     })
