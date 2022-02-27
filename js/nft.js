@@ -176,8 +176,8 @@ function collapseFaq() {
         body[i].classList.toggle('active');
 
         let activeTextBlock = document.querySelector('.text.faq_body_text.active');
-        activeTextBlock.style.padding = '5px 10px 10px';
-        activeTextBlock.style.maxHeight = activeTextBlock.scrollHeight + 5 + "px";
+        activeTextBlock.style.padding = '5px 20px 10px';
+        activeTextBlock.style.maxHeight = activeTextBlock.scrollHeight + 50 + "px";
       }
     })
   }

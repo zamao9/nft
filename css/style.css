@@ -993,7 +993,7 @@ span {
 .faq_body_text {
   max-height: 0;
   overflow: hidden;
-  transition: 0.3s ease-out;
+  transition: 0.3s ease;
 
   margin: 0;
   padding: 0;
