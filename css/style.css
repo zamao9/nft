@@ -945,7 +945,7 @@ span {
   cursor: pointer;
 
   margin: 0;
-  padding: 10px 0;
+  padding: 10px 30px;
 }
 
 .faq_head_title.active
@@ -993,9 +993,10 @@ span {
 .faq_body_text {
   max-height: 0;
   overflow: hidden;
-  transition: 0.3s ease;
+  transition: 0.3s ease-out;
 
   margin: 0;
+  padding: 0;
 }
 
 .faq_link {
