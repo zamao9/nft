@@ -514,26 +514,31 @@ a {
   transform: rotate(0);
   background-color: #83838380;
   animation: rotate_icon_block 6s linear infinite;
+  -webkit-animation: rotate_icon_block 6s linear infinite;
 }
 .factions_icons_block:nth-child(2).active {
   transform: rotate(0);
   background-color: #009f1380;
   animation: rotate_icon_block 6s linear infinite;
+  -webkit-animation: rotate_icon_block 6s linear infinite;
 }
 .factions_icons_block:nth-child(3).active {
   transform: rotate(0);
   background-color: #7600e180;
   animation: rotate_icon_block 6s linear infinite;
+  -webkit-animation: rotate_icon_block 6s linear infinite;
 }
 .factions_icons_block:nth-child(4).active {
   transform: rotate(0);
   background-color: #6a1f1f80;
   animation: rotate_icon_block 6s linear infinite;
+  -webkit-animation: rotate_icon_block 6s linear infinite;
 }
 .factions_icons_block:nth-child(5).active {
   transform: rotate(0);
   background-color: #9f7c0080;
   animation: rotate_icon_block 6s linear infinite;
+  -webkit-animation: rotate_icon_block 6s linear infinite;
 }
 @keyframes rotate_icon_block {
   0% {
