@@ -514,7 +514,7 @@ a {
   transform: rotate(0);
   background-color: #83838380;
   animation: rotate_icon_block 6s linear infinite;
-  -webkit-animation: rotate_icon_block 6s linear infinite;
+  -webkit-animation: rotate_icon_block 6s linear infinite !important;
 }
 .factions_icons_block:nth-child(2).active {
   transform: rotate(0);

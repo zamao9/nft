@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
           block[i].classList.remove('active');
         }
         block[i].classList.add('active');
-        event.currentTarget.classList.add('active');
+        event.currentTarget.classList.toggle('active');
       })
     };
   };
