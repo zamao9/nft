@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   burgerActive();
-  burgerInactivateHandler();
-  iconClickInfoChange();
-  titleActiveBodyActive();
-  collapseFaq();
 
   function burgerActive() {
 
@@ -42,6 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+  burgerInactivateHandler();
 
   function burgerInactivateHandler() {
 
@@ -92,25 +90,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* IMAGES_TOGGLE */
 
+  iconClickInfoChange();
+
   function iconClickInfoChange() {
 
      let icon = document.getElementsByClassName('factions_icons_block'),
-         info = document.getElementsByClassName('factions_info'),
-         image = document.getElementsByClassName('factions_image');
+         block = document.getElementsByClassName('nft_block');
 
     for (let i = 0; icon.length > i; ++i) {
       icon[i].addEventListener('click', (event) => {
         for (let i = 0; icon.length > i; ++i) {
           icon[i].classList.remove('active');
         }
-        for (let i = 0; info.length > i; ++i) {
-          info[i].classList.remove('active');
+        for (let i = 0; block.length > i; ++i) {
+          block[i].classList.remove('active');
         }
-        info[i].classList.add('active');
-        for (let i = 0; image.length > i; ++i) {
-          image[i].classList.remove('active');
-        }
-        image[i].classList.add('active');
+        block[i].classList.add('active');
         event.currentTarget.classList.add('active');
       })
     };
@@ -120,6 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ROADMAP_TOGGLE */
+
+  titleActiveBodyActive();
 
   function titleActiveBodyActive() {
 
@@ -145,50 +142,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* FAQ_COLLAPSE */
 
-function collapseFaq() {
 
-  let head = document.getElementsByClassName('faq_head_title'),
-      body = document.getElementsByClassName('faq_body_text');
+  collapseFaq();
 
-  for (let i = 0; head.length > i; ++i) {
-    head[i].addEventListener('click', (event) => {
-      let currentTarget = event.currentTarget,
-          activatedTextBlock = document.querySelector('.text.faq_body_text.active');
+  function collapseFaq() {
 
-      if (currentTarget.classList.contains('active')) {
-        activatedTextBlock.style.maxHeight = null;
-        activatedTextBlock.style.padding = null;
-        activatedTextBlock.style.margin = null;
-        currentTarget.classList.remove('active');
-        activatedTextBlock.classList.remove('active');
-      } else {
-        if (activatedTextBlock) {
+
+    let head = document.getElementsByClassName('faq_head_title'),
+        body = document.getElementsByClassName('faq_body_text');
+
+
+    for (let i = 0; head.length > i; ++i) {
+      head[i].addEventListener('click', (event) => {
+        let currentTarget = event.currentTarget,
+            activatedTextBlock = document.querySelector('.text.faq_body_text.active');
+
+
+        if (currentTarget.classList.contains('active')) {
           activatedTextBlock.style.maxHeight = null;
+          activatedTextBlock.style.padding = null;
+          activatedTextBlock.style.margin = null;
+          currentTarget.classList.remove('active');
+          activatedTextBlock.classList.remove('active');
+        } else {
+          if (activatedTextBlock) {
+            activatedTextBlock.style.maxHeight = null;
+          }
+
+          for (let i = 0; head.length > i; ++i) {
+            head[i].classList.remove('active');
+            body[i].classList.remove('active');
+            body[i].style.maxHeight = null;
+            body[i].style.padding = null;
+            body[i].style.margin = null;
+          }
+          event.currentTarget.classList.toggle('active');
+          body[i].classList.toggle('active');
+
+          let activeTextBlock = document.querySelector('.text.faq_body_text.active');
+          activeTextBlock.style.padding = '5px 20px 10px';
+          activeTextBlock.style.margin = '0 0 5px';
+          activeTextBlock.style.maxHeight = activeTextBlock.scrollHeight + 50 + "px";
         }
-
-        for (let i = 0; head.length > i; ++i) {
-          head[i].classList.remove('active');
-          body[i].classList.remove('active');
-          body[i].style.maxHeight = null;
-          body[i].style.padding = null;
-          body[i].style.margin = null;
-        }
-
-        event.currentTarget.classList.toggle('active');
-        body[i].classList.toggle('active');
-
-        let activeTextBlock = document.querySelector('.text.faq_body_text.active');
-        activeTextBlock.style.padding = '5px 20px 10px';
-        activeTextBlock.style.margin = '0 0 5px';
-        activeTextBlock.style.maxHeight = activeTextBlock.scrollHeight + 50 + "px";
-      }
-    })
+      })
+    }
   }
-}
+
+
+
 
 });
-
-
 
 
 

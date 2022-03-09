@@ -510,11 +510,25 @@ a {
   margin: 0 auto;
 }
 
-.factions_icons_block.active {
+.factions_icons_block:nth-child(1).active {
   transform: rotate(0);
-  background-color: #658a28;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background-color: #83838380;
+}
+.factions_icons_block:nth-child(2).active {
+  transform: rotate(0);
+  background-color: #009f1380;
+}
+.factions_icons_block:nth-child(3).active {
+  transform: rotate(0);
+  background-color: #7600e180;
+}
+.factions_icons_block:nth-child(4).active {
+  transform: rotate(0);
+  background-color: #6a1f1f80;
+}
+.factions_icons_block:nth-child(5).active {
+  transform: rotate(0);
+  background-color: #9f7c0080;
 }
 .factions_icons_block {
   width: 40px;
@@ -527,17 +541,35 @@ a {
   overflow: hidden;
 
   transform: rotate(-45deg);
-  transition: 0.3s ease;
+  transition: 0.6s ease;
 
   margin: 0 auto;
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
 }
-.factions_icons_block:hover {
+.factions_icons_block:nth-child(1):hover {
   transform: rotate(0);
-  background-color: #658a28;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background-color: #83838380;
+}
+
+.factions_icons_block:nth-child(2):hover {
+  transform: rotate(0);
+  background-color: #009f1380;
+}
+
+.factions_icons_block:nth-child(3):hover {
+  transform: rotate(0);
+  background-color: #7600e180;
+}
+
+.factions_icons_block:nth-child(4):hover {
+  transform: rotate(0);
+  background-color: #6a1f1f80;
+}
+
+.factions_icons_block:nth-child(5):hover {
+  transform: rotate(0);
+  background-color: #9f7c0080;
 }
 
 .factions_icons_block.active
@@ -548,7 +580,7 @@ a {
   font-size: 18px;
   color: #fff;
 
-  transition: 0.3s ease;
+  transition: 0.6s ease;
 
   transform: rotate(45deg);
 }
@@ -596,10 +628,14 @@ span {
 }
 
 .factions_link {
+  width: fit-content;
+
   position: relative;
   transition: 0.3s ease;
+  text-align: left;
 
   padding-left: 45px;
+  margin: 0;
 }
 .factions_link:before {
   position: absolute;
@@ -696,6 +732,78 @@ span {
   }
 
 }
+
+
+.nft_block.active {
+  display: flex;
+}
+.nft_block {
+  width: 100%;
+
+  display: none;
+  flex-direction: column;
+}
+
+.nft_rarity {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  gap: 20px;
+  justify-content: center;
+
+  padding: 20px 5px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
+}
+
+.nft {
+  width: 100%;
+  height: 50px;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+}
+.nft img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  transition: 0.3s ease;
+  object-fit: cover;
+
+  border-radius: 5px;
+}
+.nft:hover
+img {
+  transform: scale(1.1);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5), 0 0 4px rgba(255, 255, 255, 0.5), 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.common {
+  background-color: #83838333;
+}
+
+.uncommon {
+  background-color: #009f1333;
+}
+
+.rare {
+  background-color: #7400e033;
+}
+
+.mythical {
+  background-color: #6a1f1f33;
+}
+
+.legendary {
+  background-color: #9f7c0033;
+}
+
+
 
 
 
@@ -996,7 +1104,7 @@ span {
   transition: 0.3s ease;
 
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .faq_link {
@@ -1076,6 +1184,17 @@ span {
 
 
 
+@media (min-width: 375px) {
+  /* FACTIONS */
+  .nft_rarity {
+    grid-template-columns: repeat(5, 50px);
+  }
+}
+
+
+
+
+
 @media (min-width: 768px) {
   /* HEADER */
   .header_content {
@@ -1149,9 +1268,8 @@ span {
   /* FACTIONS */
   .factions_content {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
     gap: 30px;
-    align-items: center;
 
     margin: 0 auto;
     padding: 50px 15px;
@@ -1162,6 +1280,11 @@ span {
     justify-content: space-between;
     margin: 0;
     height: 280px;
+  }
+
+  .nft_rarity {
+    grid-template-columns: repeat(8, 50px);
+    gap: 30px;
   }
 
   /* WAR_HEROES */
@@ -1293,6 +1416,11 @@ span {
     left: 11px;
   }
 
+  .nft_rarity {
+    grid-template-columns: repeat(11, 50px);
+    gap: 30px;
+  }
+
   /* UNIVERSE */
   .universe_content:hover {
     transform: scale(1.04) !important;
@@ -1320,6 +1448,12 @@ span {
 
   .card_image {
     width: 60%;
+  }
+
+  /* FACTIONS */
+  .nft_rarity {
+    grid-template-columns: repeat(13, 50px);
+    gap: 30px;
   }
 }
 
