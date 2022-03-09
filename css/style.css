@@ -511,39 +511,25 @@ a {
 }
 
 .factions_icons_block:nth-child(1).active {
+  transform: rotate(0);
   background-color: #83838380;
-  animation: rotate_icon_block 6s linear infinite;
 }
 .factions_icons_block:nth-child(2).active {
   transform: rotate(0);
   background-color: #009f1380;
-  animation: rotate_icon_block 6s linear infinite;
-  -webkit-animation: rotate_icon_block 6s linear infinite;
 }
 .factions_icons_block:nth-child(3).active {
+  transform: rotate(0);
   background-color: #7600e180;
-  animation: rotate_icon_block 6s linear infinite;
 }
 .factions_icons_block:nth-child(4).active {
+  transform: rotate(0);
   background-color: #6a1f1f80;
-  animation: rotate_icon_block 6s linear infinite;
 }
 .factions_icons_block:nth-child(5).active {
+  transform: rotate(0);
   background-color: #9f7c0080;
-  animation: rotate_icon_block 6s linear infinite;
 }
-@keyframes rotate_icon_block {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .factions_icons_block {
   width: 40px;
   height: 40px;
@@ -565,22 +551,18 @@ a {
   transform: rotate(0);
   background-color: #83838380;
 }
-
 .factions_icons_block:nth-child(2):hover {
   transform: rotate(0);
   background-color: #009f1380;
 }
-
 .factions_icons_block:nth-child(3):hover {
   transform: rotate(0);
   background-color: #7600e180;
 }
-
 .factions_icons_block:nth-child(4):hover {
   transform: rotate(0);
   background-color: #6a1f1f80;
 }
-
 .factions_icons_block:nth-child(5):hover {
   transform: rotate(0);
   background-color: #9f7c0080;
@@ -588,7 +570,7 @@ a {
 
 .factions_icons_block.active
 .factions_icons {
-  animation: rotate_icon 6s linear infinite;
+  transform: rotate(0);
 }
 .factions_icons {
   font-size: 18px;
@@ -601,14 +583,6 @@ a {
 .factions_icons_block:hover
 .factions_icons {
   transform: rotate(0);
-}
-@keyframes rotate_icon {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
 }
 
 .factions_info.active {
