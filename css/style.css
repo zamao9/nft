@@ -682,13 +682,13 @@ span {
 
   border-radius: 5px;
 }
-.nft:hover
+.nft.active
 img {
   z-index: 2;
   position: relative;
   transform: scale(1.2);
 }
-.nft:hover:after {
+.nft.active:after {
   position: absolute;
   z-index: 1;
   content: '';
@@ -706,7 +706,7 @@ img {
   box-shadow: 0 0 2px #fff inset, 0 0 4px #fff inset, 0 0 6px #fff inset;
 }
 
-.nft:hover
+.nft.active
 .nft_content {
   display: grid;
   opacity: 1;
