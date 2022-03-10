@@ -757,6 +757,8 @@ span {
   width: 100%;
   height: 50px;
 
+  position: relative;
+
   cursor: pointer;
 
   border-radius: 5px;
@@ -772,11 +774,86 @@ span {
 
   border-radius: 5px;
 }
-.nft:hover
+.nft.active
 img {
-  transform: scale(1.1);
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.5), 0 0 4px rgba(255, 255, 255, 0.5), 0 0 6px rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  position: relative;
 }
+
+.nft.active
+.nft_content {
+  opacity: 1;
+  pointer-events: auto;
+}
+.nft_content {
+  width: 260px;
+
+  position: absolute;
+  z-index: 1;
+  top: 85%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+
+  padding: 15px 10px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) , 0 0 4px rgba(255, 255, 255, 0.5) , 0 0 6px rgba(255, 255, 255, 0.5) ;
+  border-radius: 5px;
+}
+
+.nft_title {
+  font-size: 15px;
+  margin: 0;
+  text-align: left;
+}
+
+.nft_text {
+  font-size: 13px;
+  margin: 0;
+  text-align: left !important;
+}
+
+.nft_span {
+  font-size: 13px;
+}
+
+.nft_link {
+  width: fit-content;
+
+  font-size: 13px;
+  margin: 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+.nft_link:before {
+  width: 20px !important;
+  height: 20px !important;
+
+  left: -25px !important;
+}
+.nft_link:hover:before {
+  left: calc(100% + 5px) !important;
+}
+.nft_link:after {
+  display: block !important;
+
+  width: 14px !important;
+  height: 14px !important;
+
+  left: -22px !important;
+}
+.nft_link:hover:after {
+  width: calc(100% + 35px) !important;
+}
+
 
 .common {
   background-color: #83838333;
@@ -1414,6 +1491,10 @@ img {
   .nft_rarity {
     grid-template-columns: repeat(11, 50px);
     gap: 30px;
+  }
+
+  .nft_link {
+    margin: 0 0 0 30px;
   }
 
   /* UNIVERSE */

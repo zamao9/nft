@@ -95,10 +95,15 @@ document.addEventListener('DOMContentLoaded', () => {
   function iconClickInfoChange() {
 
      let icon = document.getElementsByClassName('factions_icons_block'),
-         block = document.getElementsByClassName('nft_block');
+         block = document.getElementsByClassName('nft_block'),
+         nft = document.querySelectorAll('.nft');
 
     for (let i = 0; icon.length > i; ++i) {
       icon[i].addEventListener('click', (event) => {
+
+        for (let i = 0; nft.length > i; ++i) {
+          nft[i].classList.remove('active');
+        }
         for (let i = 0; icon.length > i; ++i) {
           icon[i].classList.remove('active');
         }
@@ -107,6 +112,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         block[i].classList.add('active');
         event.currentTarget.classList.toggle('active');
+      })
+    };
+
+    for (let i = 0; nft.length > i; ++i) {
+      nft[i].addEventListener('click', (event) => {
+
+        let currentNft = event.currentTarget;
+
+        if (currentNft.classList.contains('active')) {
+          currentNft.classList.remove('active');
+        } else {
+          for (let i = 0; nft.length > i; ++i) {
+            nft[i].classList.remove('active');
+          }
+          nft[i].classList.toggle('active');
+        }
       })
     };
   };
