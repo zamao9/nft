@@ -1322,6 +1322,49 @@ img {
 
 
 
+@media (min-width: 769px) {
+  /* FACTIONS */
+  .nft:hover
+  img {
+    z-index: 2;
+    position: relative;
+    transform: scale(1.2);
+  }
+
+  .nft:hover:after {
+    position: absolute;
+    z-index: 1;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 70px;
+    height: 80px;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    box-shadow: 0 0 2px #fff inset, 0 0 4px #fff inset, 0 0 6px #fff inset;
+  }
+
+  .nft:hover
+  .nft_content {
+    display: grid;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+}
+
+
+
+
+
+
+
+
 @media (min-width: 1024px) {
   /* INTRO */
   .intro {

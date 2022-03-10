@@ -115,21 +115,24 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     };
 
-    for (let i = 0; nft.length > i; ++i) {
-      nft[i].addEventListener('click', (event) => {
+    if (window.innerWidth <= 768) {
+      for (let i = 0; nft.length > i; ++i) {
+        nft[i].addEventListener('click', (event) => {
 
-        let currentNft = event.currentTarget;
+          let currentNft = event.currentTarget;
 
-        if (currentNft.classList.contains('active')) {
-          currentNft.classList.remove('active');
-        } else {
-          for (let i = 0; nft.length > i; ++i) {
-            nft[i].classList.remove('active');
+          if (currentNft.classList.contains('active')) {
+            currentNft.classList.remove('active');
+          } else {
+            for (let i = 0; nft.length > i; ++i) {
+              nft[i].classList.remove('active');
+            }
+            nft[i].classList.toggle('active');
           }
-          nft[i].classList.toggle('active');
-        }
-      })
-    };
+        })
+      };
+    }
+
   };
 
 
