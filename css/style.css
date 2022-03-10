@@ -725,7 +725,7 @@ img {
   transition: 0.3s ease;
 
   padding: 15px 10px;
-  margin: 0 0 0 -10px;
+  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -1173,6 +1173,7 @@ img {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
 }
+
 
 
 
