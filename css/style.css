@@ -585,38 +585,6 @@ a {
   transform: rotate(0);
 }
 
-.factions_info.active {
-  display: block;
-}
-.factions_info {
-  width: 100%;
-
-  display: none;
-}
-
-.factions_text {
-  border-radius: 5px;
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 10px;
-}
-
-.factions_stats {
-  display: flex;
-  justify-content: space-between;
-}
-
-.factions_stats_items {
-  color: #fff;
-  font-size: 15px;
-  text-align: center;
-
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 0 4px rgba(255, 255, 255, 0.5) inset, 0 0 6px rgba(255, 255, 255, 0.5) inset;
-  border-radius: 5px;
-  padding: 2px 15px;
-  margin-bottom: 30px;
-}
-
 span {
   color: #658a28;
   text-shadow: 0 0 2px rgba(101, 138, 40, 0.5), 0 0 4px rgba(101, 138, 40, 0.5), 0 0 6px rgba(101, 138, 40, 0.5);
@@ -669,66 +637,6 @@ span {
 }
 
 
-.factions_items {
-  width: 100%;
-}
-
-.factions_image.active {
-  display: block;
-}
-.factions_image {
-  display: none;
-  width: 250px;
-  height: 300px;
-
-  position: relative;
-  z-index: 1;
-
-  overflow: hidden;
-  opacity: 0.7;
-
-  margin: 0 auto;
-  border-radius: 5px;
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5), 0 0 4px rgba(255, 255, 255, 0.5), 0 0 6px rgba(255, 255, 255, 0.5);
-}
-.factions_image:after {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: rgba(0, 0, 0);
-}
-.factions_image:hover {
-  animation: blink_factions_image 0.2s ease;
-  opacity: 1;
-}
-.factions_image img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-@keyframes blink_factions_image {
-  0% {
-    opacity: 0.7;
-  }
-  33% {
-    opacity: 1;
-  }
-  66% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 1;
-  }
-
-}
-
-
 .nft_block.active {
   display: flex;
 }
@@ -769,44 +677,62 @@ span {
 
   display: block;
 
-  transition: 0.3s ease;
+  transition: 0.1s ease;
   object-fit: cover;
 
   border-radius: 5px;
 }
-.nft.active
+.nft:hover
 img {
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5), 0 0 4px rgba(255, 255, 255, 0.5), 0 0 6px rgba(255, 255, 255, 0.5);
   z-index: 2;
   position: relative;
+  transform: scale(1.2);
+}
+.nft:hover:after {
+  position: absolute;
+  z-index: 1;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 70px;
+  height: 80px;
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  box-shadow: 0 0 2px #fff inset, 0 0 4px #fff inset, 0 0 6px #fff inset;
 }
 
-.nft.active
+.nft:hover
 .nft_content {
+  display: grid;
   opacity: 1;
   pointer-events: auto;
 }
 .nft_content {
   width: 260px;
 
-  position: absolute;
-  z-index: 1;
-  top: 85%;
-
-  display: grid;
+  display: none;
   grid-template-columns: 1fr;
   gap: 5px;
+
+  position: relative;
+  z-index: 1;
 
   opacity: 0;
   pointer-events: none;
   transition: 0.3s ease;
 
   padding: 15px 10px;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.75);
+  margin: 0 0 0 -10px;
+  background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(16px);
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) , 0 0 4px rgba(255, 255, 255, 0.5) , 0 0 6px rgba(255, 255, 255, 0.5) ;
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 5px;
+  box-shadow: 0 0 2px #fff inset, 0 0 4px #fff inset, 0 0 6px #fff inset;
 }
 
 .nft_title {
@@ -822,7 +748,7 @@ img {
 }
 
 .nft_span {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .nft_link {
