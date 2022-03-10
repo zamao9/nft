@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; icon.length > i; ++i) {
       icon[i].addEventListener('click', (event) => {
 
-        for(i = 0; nft.length > i; ++i) {
+        for (let i = 0; nft.length > i; ++i) {
           nft[i].classList.remove('active')
         }
         for (let i = 0; icon.length > i; ++i) {

@@ -665,11 +665,9 @@ span {
   width: 100%;
   height: 50px;
 
-  position: relative;
-
   cursor: pointer;
 
-  border-radius: 5px;
+  position: relative;
 }
 .nft img {
   width: 100%;
