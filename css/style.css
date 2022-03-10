@@ -1180,13 +1180,6 @@ img {
 
 
 
-@media (min-width: 375px) {
-  /* FACTIONS */
-  .nft_rarity {
-    grid-template-columns: repeat(5, 50px);
-  }
-}
-
 
 
 
@@ -1357,9 +1350,6 @@ img {
   }
 
 }
-
-
-
 
 
 
