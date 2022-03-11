@@ -96,7 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
      let icon = document.getElementsByClassName('factions_icons_block'),
          block = document.getElementsByClassName('nft_block'),
-         nft = document.querySelectorAll('.nft');
+         nft = document.querySelectorAll('.nft'),
+         section = document.querySelectorAll('.section');
 
     for (let i = 0; icon.length > i; ++i) {
       icon[i].addEventListener('click', (event) => {

@@ -493,7 +493,7 @@ a {
   gap: 30px;
 
   margin: 0 auto;
-  padding: 50px 15px;
+  padding: 50px 15px 100px;
 }
 
 .factions_items {
@@ -697,11 +697,9 @@ img {
   width: 70px;
   height: 80px;
 
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 5px;
-  box-shadow: 0 0 2px #fff inset, 0 0 4px #fff inset, 0 0 6px #fff inset;
+  background-color: #000;
+  border: 1px solid #ffffff80;
+  border-bottom: none;
 }
 
 .nft.active
@@ -725,12 +723,9 @@ img {
   transition: 0.3s ease;
 
   padding: 15px 10px;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 5px;
-  box-shadow: 0 0 2px #fff inset, 0 0 4px #fff inset, 0 0 6px #fff inset;
+  margin: 14px 0 0 -10px;
+  background-color: #000;
+  border: 1px solid #ffffff80;
 }
 
 .nft_title {
@@ -1336,11 +1331,9 @@ img {
     width: 70px;
     height: 80px;
 
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
-    box-shadow: 0 0 2px #fff inset, 0 0 4px #fff inset, 0 0 6px #fff inset;
+    background-color: #000;
+    border: 1px solid #ffffff80;
+    border-bottom: none;
   }
 
   .nft:hover
