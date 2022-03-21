@@ -354,7 +354,7 @@ a {
   grid-row-gap: 30px;
   perspective: 800px;
 
-  padding: 100px 15px;
+  padding: 50px 15px;
   margin: 0 auto;
   background-color: #04071b;
 }
@@ -455,7 +455,7 @@ a {
   align-items: center;
 
   margin: 0 auto;
-  padding: 100px 15px;
+  padding: 50px 15px;
   background-color: #04071b;
 }
 
@@ -482,7 +482,7 @@ a {
   width: 100%;
 
   background-color: #04071b;
-  padding: 100px 15px;
+  padding: 50px 15px;
 }
 
 .factions_content {
@@ -843,7 +843,7 @@ img {
   -webkit-perspective-origin: top;
 
   margin: 0 auto;
-  padding: 100px 15px;
+  padding: 50px 15px;
   background-color: #04071b;
 }
 
@@ -918,7 +918,7 @@ img {
   width: 100%;
 
   background-color: #04071b;
-  padding: 100px 15px;
+  padding: 50px 15px;
 }
 
 .roadmap_content {
@@ -1042,7 +1042,7 @@ img {
   width: 100%;
 
   background-color: #04071b;
-  padding: 100px 15px;
+  padding: 50px 15px;
 }
 
 .faq_content {
