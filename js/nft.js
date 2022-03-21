@@ -1,5 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ACTIVE SCROLL */
+
+  const navInit = () => {
+    const nav = document.getElementById('nav'),
+          links = document.querySelectorAll('.nav_links'),
+          sections = document.querySelectorAll('.section'),
+          intro = document.getElementById('intro');
+    sections.forEach(section => {
+      if (window.pageYOffset + document.querySelector('header').offsetHeight + 6 < intro.offsetHeight) {
+        links.forEach(link => {
+          link.classList.remove('active')
+        })
+      }
+      if (window.pageYOffset + document.querySelector('header').offsetHeight + 6 >= section.offsetTop) {
+        links.forEach(link => {
+          link.classList.remove('active')
+          if (link.dataset.section === section.dataset.section) {
+            link.classList.add('active')
+          }
+        })
+      }
+    })
+  }
+  navInit()
+  window.addEventListener('scroll', () => {
+    navInit()
+  })
+  window.addEventListener('resize', () => {
+    navInit()
+  });
+
+
+
+
+
+
+
+
   burgerActive();
 
   function burgerActive() {
@@ -22,10 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; links.length > i; ++i) {
       links[i].addEventListener('click', (event) => {
-        for (let i = 0; links.length > i; ++i) {
-          links[i].classList.remove('active');
-        }
-        event.currentTarget.classList.add('active');
+        event.preventDefault();
         nav.classList.remove('active');
         burger.classList.remove('active');
         hide_background.classList.remove('active');
@@ -235,6 +270,9 @@ $(function() {
     $("html, body").animate ({
       scrollTop: blockOffset
     }, 900);
+
+
+
   });
 
 })
